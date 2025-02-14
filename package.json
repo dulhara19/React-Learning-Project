@@ -2,6 +2,14 @@
   "name": "test-react-app",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "eslint": "8.56",
+    "eslint-config-prettier": "8.10",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "prettier": "^3.5.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

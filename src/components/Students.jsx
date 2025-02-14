@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 const Students = ({ ...props }) => {
   return (
     <div className="divcls">
@@ -7,5 +9,11 @@ const Students = ({ ...props }) => {
       <h3>{props.country}</h3>
     </div>
   );
+};
+
+Studentcard.propTypes = {
+  name: PropTypes.string,
+  name: PropTypes.number,
+  name: PropTypes.string,
 };
 export default Students;

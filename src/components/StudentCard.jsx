@@ -1,4 +1,5 @@
 import Students from "./Students";
+import PropTypes from "prop-types";
 
 const Studentcard = ({ obj }) => {
   return (
@@ -7,5 +8,11 @@ const Studentcard = ({ obj }) => {
       <Students name={obj.name} age={obj.age} country={obj.country} />
     </div>
   );
+};
+
+Studentcard.propTypes = {
+  name: PropTypes.string,
+  name: PropTypes.number,
+  name: PropTypes.string,
 };
 export default Studentcard;

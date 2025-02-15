@@ -1,3 +1,5 @@
+import React from "react";
+
 import Students from "./Students";
 import PropTypes from "prop-types";
 
@@ -10,9 +12,18 @@ const Studentcard = ({ obj }) => {
   );
 };
 
+// Studentcard.propTypes = {
+//   name: PropTypes.string,
+//   age: PropTypes.number,
+//   country: PropTypes.string,
+// };
+
 Studentcard.propTypes = {
-  name: PropTypes.string,
-  name: PropTypes.number,
-  name: PropTypes.string,
+  obj: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    country: PropTypes.string.isRequired,
+  }).isRequired,
 };
+
 export default Studentcard;

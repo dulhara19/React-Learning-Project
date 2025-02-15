@@ -11,9 +11,10 @@ const Students = ({ ...props }) => {
   );
 };
 
-Studentcard.propTypes = {
+Students.propTypes = {
   name: PropTypes.string,
-  name: PropTypes.number,
-  name: PropTypes.string,
+  age: PropTypes.number,
+  country: PropTypes.string,
 };
+
 export default Students;

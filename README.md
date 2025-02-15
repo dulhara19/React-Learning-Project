@@ -7,7 +7,7 @@ console.log(event.target.value);}
 
 return (
 
-<div className="containerdiv">
+<!-- <div className="containerdiv">
 <h1>my react app</h1>
 <Studentcard obj={obj} />
 <input
@@ -16,7 +16,8 @@ return (
         onChange={returnfunction}
         className="inputfield"
       />
-</div>
+</div> -->
+
 ) }
 
 when input feils sent to the html page when it calls the App.js file, it will show you the input field in the web page. and when i create this input, i added

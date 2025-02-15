@@ -1,5 +1,7 @@
 <h3> important facts </h3>
 
+```
+
 function App() {
 
 const returnfunction = (event) => {
@@ -7,7 +9,7 @@ console.log(event.target.value);}
 
 return (
 
-<!-- <div className="containerdiv">
+ <div className="containerdiv">
 <h1>my react app</h1>
 <Studentcard obj={obj} />
 <input
@@ -16,7 +18,7 @@ return (
         onChange={returnfunction}
         className="inputfield"
       />
-</div> -->
+</div>
 
 ) }
 
@@ -26,3 +28,4 @@ onChange={returnfunction} this is an event handler that triggers a function when
 then this is my {returnfunction},
 const returnfunction = (event) => {
 console.log(event.target.value);} this will show whatever types on input field, inside the console.
+```

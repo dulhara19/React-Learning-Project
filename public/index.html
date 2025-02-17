@@ -29,10 +29,9 @@
         const input = document.getElementById("text");
         const para = document.getElementById("para");
 
-        para.innerHTML.target.value;
-
-        input.addEventListener("input", function () {
+        input.addEventListener("input", function (event) {
           console.log(input.value);
+          para.innerHTML = event.target.value;
         });
       </script>
     </div>

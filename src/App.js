@@ -1,6 +1,6 @@
 import React from "react";
-
 import Studentcard from "./components/StudentCard";
+import Counter from "./components/Counter";
 import "./App.css";
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
 
   const returnfunction = (event) => {
     console.log(event.target.value);
+    const para = document.getElementById("para");
+    para.innerHTML = event.target.value;
   };
 
   return (
@@ -25,6 +27,11 @@ function App() {
         onChange={returnfunction}
         className="inputfield"
       />
+      <p id="para"></p>
+
+      <div className="counterdiv">
+        <Counter />
+      </div>
     </div>
   );
 }

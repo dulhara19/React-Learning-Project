@@ -1,6 +1,5 @@
 <h1> important facts </h1>
 
-<h3> fact-01-onChange event handler  </h3>
 ```
 
 function App() {
@@ -22,7 +21,6 @@ return (
 </div>
 
 ) }
-
 ```
 
 when input feils sent to the html page when it calls the App.js file, it will show you the input field in the web page. and when i create this input, i added
@@ -31,30 +29,5 @@ onChange={returnfunction} this is an event handler that triggers a function when
 then this is my {returnfunction},
 const returnfunction = (event) => {
 console.log(event.target.value);} this will show whatever types on input field, inside the console.
-```
 
-<h3> fact-02-useState </h3>
-
-import React, { useState } from "react";
-
-const Counter = () => {
-const [count, setCount] = useState(0);
-
-const increment = () => {
-setCount(count + 1);
-};
-
-const decrement = () => {
-setCount(count - 1);
-};
-
-return (
-<div>
-<h1>Counter: {count}</h1>
-<button onClick={increment}>+</button>
-<button onClick={decrement}>-</button>
-</div>
-);
-};
-
-export default Counter;
+<h1> important facts </h1>

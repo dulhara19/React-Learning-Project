@@ -30,4 +30,35 @@ then this is my {returnfunction},
 const returnfunction = (event) => {
 console.log(event.target.value);} this will show whatever types on input field, inside the console.
 
-<h1> important facts </h1>
+<h1> useState</h1>
+
+```
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+    </div>
+  );
+};
+export default Counter;
+```
+
+we need to re render actual dom. therefore we need to use this. here i have created counter.jsx file. it imports {useState} from react.
+
+1. useState(0) initializes count with 0.
+2. count stores the current counter value.
+3. setCount is a function to update count and trigger a re-render.

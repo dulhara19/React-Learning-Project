@@ -14,7 +14,13 @@ function App() {
     { lastname: " Borer", age: 20, hometown: "gampaha" },
     { lastname: " Alex", age: 24, hometown: "kandy" },
   ];
-
+  // const searchStudent = (event) => {
+  //   studentList.filter((student) => {
+  //     if (student.lastname.includes(event.target.value)) {
+  //       console.log(student);
+  //     }
+  //   });
+  // };
   // const input = document.getElementById("text2");
   // input.addEventListener("input", function () {
   //   console.log(input.value);
@@ -41,6 +47,7 @@ function App() {
 
       <SearchBar onSearch={searchChange} />
       <p>{searchtext}</p>
+
       <Studentcard obj={obj} />
 
       {studentList.map((student, index) => {

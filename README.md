@@ -65,7 +65,23 @@ we need to re render actual dom. therefore we need to use this. here i have crea
 
 <h1>callback functions</h1>
 
+Since props are one-way (parent → child), we can't directly send data from a child to a parent using props. Instead, we use callback functions (a function passed as a prop from the parent) to send data back to the parent.
+
+<h1>callback functions-filter results from child component</h1>
+
+in here i created dynamic-stu-card component which shows the filtered results. it uses props to get data and display the view according to the received data.
+
 ```
-git
-Since props are one-way (parent → child), we can't directly send data from a child to a parent using props. Instead, we use callback functions (a function passed as a prop from the parent) to send data back to the parent
+const studentcard2 = (props) => {
+  return (
+    <div className="stucard-container">
+      <h1>Student Card</h1>
+      <div className="stucard">
+        <h2>{props.name}</h2>
+        <p>Age: {props.age}</p>
+        <p>Country: {props.country}</p>
+      </div>
+    </div>
+  );
+};
 ```

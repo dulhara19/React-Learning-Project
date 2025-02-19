@@ -2,6 +2,7 @@ import React from "react";
 import Studentcard from "./components/StudentCard";
 import Counter from "./components/Counter";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const obj = { name: "dulhara", age: "23", country: "srilanka" };
@@ -10,6 +11,10 @@ function App() {
   // input.addEventListener("input", function () {
   //   console.log(input.value);
   // });
+
+  const searchChange = (event) => {
+    console.log(event.target.value);
+  };
 
   const returnfunction = (event) => {
     console.log(event.target.value);
@@ -20,6 +25,7 @@ function App() {
   return (
     <div className="containerdiv">
       <h1>my react app</h1>
+      <SearchBar onSearch={searchChange} />
       <Studentcard obj={obj} />
       <input
         type="text"

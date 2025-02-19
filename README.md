@@ -66,6 +66,6 @@ we need to re render actual dom. therefore we need to use this. here i have crea
 <h1>callback functions</h1>
 
 ```
-
+git
 Since props are one-way (parent → child), we can't directly send data from a child to a parent using props. Instead, we use callback functions (a function passed as a prop from the parent) to send data back to the parent
 ```

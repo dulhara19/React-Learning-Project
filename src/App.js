@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Studentcard from "./components/StudentCard";
 import Counter from "./components/Counter";
 import "./App.css";
@@ -11,9 +11,11 @@ function App() {
   // input.addEventListener("input", function () {
   //   console.log(input.value);
   // });
+  const [searchtext, setText] = useState("");
 
   const searchChange = (event) => {
     console.log(event.target.value);
+    setText(event.target.value);
   };
 
   const returnfunction = (event) => {
@@ -26,6 +28,7 @@ function App() {
     <div className="containerdiv">
       <h1>my react app</h1>
       <SearchBar onSearch={searchChange} />
+      <p>{searchtext}</p>
       <Studentcard obj={obj} />
       <input
         type="text"

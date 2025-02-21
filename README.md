@@ -84,6 +84,27 @@ const studentcard2 = (props) => {
     </div>
   );
 };
-``` .
+```
+
+And when the data is extracted from the child component(input feild). i send that data from child component to parent App.js using hooks.then stored it as "searchtext" then, i use that data to filter the data and display as dynamic student card component(studentcard2) here i have mentioned the structure of studentcard2. Also i have created list of hardcoded data which we need to compare search data with.
+
+```
+ //list of array to dynamic-stu-card
+  const studentList = [
+    { lastname: "Anne", age: 25, hometown: "colombo" },
+    { lastname: "Borer", age: 20, hometown: "gampaha" },
+    { lastname: "Alex", age: 24, hometown: "kandy" },
+  ];
+```
+
+after that, we need to filter the data given from search bar. so here is the filtering part
+
+```
+ //filtering the studentList array based on the search text
+  const searchstulist = studentList.filter((student) =>
+    student.lastname.toLowerCase().includes(searchtext.toLowerCase()),
+  );
+  ```
+
 
 ````

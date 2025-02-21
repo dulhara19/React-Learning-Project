@@ -10,14 +10,15 @@ function App() {
 
   //list of array to dynamic-stu-card
   const studentList = [
-    { lastname: " Anne", age: 25, hometown: "colombo" },
-    { lastname: " Borer", age: 20, hometown: "gampaha" },
-    { lastname: " Alex", age: 24, hometown: "kandy" },
+    { lastname: "Anne", age: 25, hometown: "colombo" },
+    { lastname: "Borer", age: 20, hometown: "gampaha" },
+    { lastname: "Alex", age: 24, hometown: "kandy" },
   ];
   const [searchtext, setText] = useState("");
 
-  const searchstulist = studentList.filter(
-    (student) => student.age > searchtext,
+  //filtering the studentList array based on the search text
+  const searchstulist = studentList.filter((student) =>
+    student.lastname.toLowerCase().includes(searchtext.toLowerCase()),
   );
 
   // const input = document.getElementById("text2");
@@ -47,6 +48,8 @@ function App() {
 
       <Studentcard obj={obj} />
 
+      {/* this is where showing all the students in the studentList array */}
+
       {/* {studentList.map((student, index) => {
         return (
           <Studentcard2
@@ -58,6 +61,7 @@ function App() {
         );
       })} */}
 
+      {/* thie is where the search bar is used to filter the students based on the age and display the students who are older than the entered age. */}
       {searchstulist.map((student, index) => {
         return (
           <Studentcard2

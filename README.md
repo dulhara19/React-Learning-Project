@@ -104,7 +104,5 @@ after that, we need to filter the data given from search bar. so here is the fil
   const searchstulist = studentList.filter((student) =>
     student.lastname.toLowerCase().includes(searchtext.toLowerCase()),
   );
-  ```
-
-
+```
 ````

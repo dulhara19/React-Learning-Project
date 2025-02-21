@@ -71,7 +71,7 @@ Since props are one-way (parent → child), we can't directly send data from a c
 
 in here i created dynamic-stu-card component which shows the filtered results. it uses props to get data and display the view according to the received data.
 
-```
+````
 const studentcard2 = (props) => {
   return (
     <div className="stucard-container">
@@ -84,4 +84,6 @@ const studentcard2 = (props) => {
     </div>
   );
 };
-```
+``` .
+
+````

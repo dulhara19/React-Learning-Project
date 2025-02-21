@@ -14,19 +14,16 @@ function App() {
     { lastname: " Borer", age: 20, hometown: "gampaha" },
     { lastname: " Alex", age: 24, hometown: "kandy" },
   ];
-  // const searchStudent = (event) => {
-  //   studentList.filter((student) => {
-  //     if (student.lastname.includes(event.target.value)) {
-  //       console.log(student);
-  //     }
-  //   });
-  // };
+  const [searchtext, setText] = useState("");
+
+  const searchstulist = studentList.filter(
+    (student) => student.age > searchtext,
+  );
+
   // const input = document.getElementById("text2");
   // input.addEventListener("input", function () {
   //   console.log(input.value);
   // });
-
-  const [searchtext, setText] = useState("");
 
   //usestate and print passed data from a child component
   const searchChange = (event) => {
@@ -50,7 +47,18 @@ function App() {
 
       <Studentcard obj={obj} />
 
-      {studentList.map((student, index) => {
+      {/* {studentList.map((student, index) => {
+        return (
+          <Studentcard2
+            key={index}
+            name={student.lastname}
+            age={student.age}
+            country={student.hometown}
+          />
+        );
+      })} */}
+
+      {searchstulist.map((student, index) => {
         return (
           <Studentcard2
             key={index}
